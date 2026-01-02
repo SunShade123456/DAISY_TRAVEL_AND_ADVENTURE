@@ -25,15 +25,13 @@ export const sendMessageToGemini = async (
   try {
     const model = 'gemini-2.5-flash';
     
-    // Construct the conversation history for context, but usually we just send the new prompt 
-    // effectively for a single turn in this simple implementation, or use chat.
-    // For this implementation, we will use a chat session.
-    
     const chat = ai.chats.create({
       model: model,
       config: {
-        systemInstruction: `You are a helpful, enthusiastic travel assistant for "NTB Travels". 
-        You help users find tour packages in Nepal, give travel advice, and suggest gear from our shop.
+        systemInstruction: `You are a helpful, enthusiastic travel assistant for "Daisy Travel & Adventure". 
+        You help users find tour packages in Nepal, give travel advice (trekking gear, altitude sickness tips), and suggest products from our shop.
+        Our brand is professional, adventurous, and reliable. We are based in Nepal. 
+        Our logo features a sun rising over the mountains, symbolizing new beginnings and adventure.
         Be concise and friendly. Use emojis occasionally.`,
         tools: [{ googleMaps: {} }],
       },
