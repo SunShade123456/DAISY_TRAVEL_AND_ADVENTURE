@@ -1,3 +1,17 @@
+export interface Guide {
+  id: number;
+  name: string;
+  photo: string;
+  expertise: string[];
+  specializations: string[];
+  rating: number;
+  reviewCount: number;
+  bio: string;
+  yearsExperience: number;
+  languages: string[];
+  certifications: string[];
+}
+
 export interface Package {
   id: number;
   title: string;
@@ -7,6 +21,10 @@ export interface Package {
   image: string;
   category: string;
   rating: number;
+  guideId: number;
+  highlights: string[];
+  difficulty: 'Easy' | 'Moderate' | 'Challenging' | 'Extreme';
+  groupSize: string;
 }
 
 export interface Product {
@@ -31,6 +49,17 @@ export interface BlogPost {
   date: string;
   image: string;
   author: string;
+}
+
+export interface Testimonial {
+  id: number;
+  name: string;
+  location: string;
+  photo: string;
+  text: string;
+  rating: number;
+  packageId: number;
+  guideId: number;
 }
 
 export enum Page {

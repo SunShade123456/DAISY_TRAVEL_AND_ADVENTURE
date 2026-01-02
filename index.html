@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NTB Travels</title>
+    <title>Daisy Travel & Adventure - Explore Nepal</title>
+    <meta name="description" content="Experience Nepal with expert local guides. Trekking, wildlife safaris, cultural tours and adventure sports with Daisy Travel & Adventure." />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
@@ -16,13 +17,86 @@
             },
             colors: {
               brand: {
-                50: '#f0f9ff',
-                100: '#e0f2fe',
-                500: '#0ea5e9',
-                600: '#0284c7',
-                900: '#0c4a6e',
+                50: '#FFF7ED',
+                100: '#FFEDD5',
+                200: '#FED7AA',
+                300: '#FDBA74',
+                400: '#FB923C',
+                500: '#F97316',
+                600: '#EA580C',
+                700: '#C2410C',
+                800: '#9A3412',
+                900: '#7C2D12',
+              },
+              accent: {
+                50: '#EFF6FF',
+                100: '#DBEAFE',
+                200: '#BFDBFE',
+                300: '#93C5FD',
+                400: '#60A5FA',
+                500: '#1E3A8A',
+                600: '#1E40AF',
+                700: '#1D4ED8',
+                800: '#1E3A8A',
+                900: '#172554',
+              },
+              neutral: {
+                50: '#F9FAFB',
+                100: '#F3F4F6',
+                200: '#E5E7EB',
+                300: '#D1D5DB',
+                400: '#9CA3AF',
+                500: '#6B7280',
+                600: '#4B5563',
+                700: '#374151',
+                800: '#1F2937',
+                900: '#111827',
               }
-            }
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'fade-in-down': 'fadeInDown 0.8s ease-out forwards',
+              'slide-in-right': 'slideInRight 0.6s ease-out forwards',
+              'slide-in-left': 'slideInLeft 0.6s ease-out forwards',
+              'pulse-soft': 'pulseSoft 2s ease-in-out infinite',
+              'bounce-soft': 'bounceSoft 2s ease-in-out infinite',
+              'scale-in': 'scaleIn 0.5s ease-out forwards',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-15px)' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(30px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              fadeInDown: {
+                '0%': { opacity: '0', transform: 'translateY(-30px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              slideInRight: {
+                '0%': { opacity: '0', transform: 'translateX(-30px)' },
+                '100%': { opacity: '1', transform: 'translateX(0)' },
+              },
+              slideInLeft: {
+                '0%': { opacity: '0', transform: 'translateX(30px)' },
+                '100%': { opacity: '1', transform: 'translateX(0)' },
+              },
+              pulseSoft: {
+                '0%, 100%': { opacity: '1' },
+                '50%': { opacity: '0.7' },
+              },
+              bounceSoft: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              scaleIn: {
+                '0%': { opacity: '0', transform: 'scale(0.9)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              }
+            },
           }
         }
       }
@@ -30,13 +104,163 @@
     <style>
       body { font-family: 'Inter', sans-serif; }
       h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+
       /* Hide scrollbar for clean horizontal scrolling */
-      .no-scrollbar::-webkit-scrollbar {
-          display: none;
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+      /* Parallax effect */
+      .parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
-      .no-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
+      @media (max-width: 768px) {
+        .parallax { background-attachment: scroll; }
+      }
+
+      /* Gradient text utility */
+      .gradient-text {
+        background: linear-gradient(135deg, #F97316 0%, #FBBF24 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* Gradient background */
+      .bg-brand-gradient {
+        background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+      }
+
+      /* Hero gradient overlay */
+      .hero-gradient {
+        background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.7) 100%);
+      }
+
+      /* Glass effect */
+      .glass {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      .glass-white {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      /* Card hover effects */
+      .card-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Image zoom on hover */
+      .img-zoom {
+        transition: transform 0.7s ease;
+      }
+      .group:hover .img-zoom {
+        transform: scale(1.1);
+      }
+
+      /* Floating label styles */
+      .floating-label {
+        position: relative;
+      }
+      .floating-label input,
+      .floating-label textarea,
+      .floating-label select {
+        padding-top: 1.5rem;
+      }
+      .floating-label label {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.2s ease;
+        pointer-events: none;
+        color: #9CA3AF;
+        font-size: 0.875rem;
+      }
+      .floating-label textarea + label {
+        top: 1.5rem;
+      }
+      .floating-label input:focus + label,
+      .floating-label input:not(:placeholder-shown) + label,
+      .floating-label textarea:focus + label,
+      .floating-label textarea:not(:placeholder-shown) + label,
+      .floating-label select:focus + label,
+      .floating-label select:valid + label {
+        top: 0.5rem;
+        transform: translateY(0);
+        font-size: 0.75rem;
+        color: #F97316;
+      }
+
+      /* Gradient border animation */
+      .gradient-border {
+        position: relative;
+        background: linear-gradient(white, white) padding-box,
+                    linear-gradient(135deg, #F97316, #FBBF24) border-box;
+        border: 2px solid transparent;
+      }
+
+      /* Scroll indicator animation */
+      .scroll-indicator {
+        animation: bounceSoft 2s ease-in-out infinite;
+      }
+
+      /* Stagger animation delays */
+      .stagger-1 { animation-delay: 0.1s; }
+      .stagger-2 { animation-delay: 0.2s; }
+      .stagger-3 { animation-delay: 0.3s; }
+      .stagger-4 { animation-delay: 0.4s; }
+      .stagger-5 { animation-delay: 0.5s; }
+
+      /* Hide scrollbar but keep scroll functionality */
+      html {
+        scroll-behavior: smooth;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE/Edge */
+      }
+      ::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+      }
+
+      /* Scroll-triggered reveal animation */
+      .reveal-up {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+      .reveal-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Staggered children animation */
+      .stagger-children > * {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .stagger-children.visible > *:nth-child(1) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+      .stagger-children.visible > *:nth-child(2) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+      .stagger-children.visible > *:nth-child(3) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+      .stagger-children.visible > *:nth-child(4) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+      .stagger-children.visible > *:nth-child(5) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
+      .stagger-children.visible > *:nth-child(6) { transition-delay: 0.6s; opacity: 1; transform: translateY(0); }
+      .stagger-children.visible > *:nth-child(7) { transition-delay: 0.7s; opacity: 1; transform: translateY(0); }
+      .stagger-children.visible > *:nth-child(8) { transition-delay: 0.8s; opacity: 1; transform: translateY(0); }
+
+      /* Smooth fade for scroll indicator */
+      .scroll-fade {
+        transition: opacity 0.5s ease-out;
       }
     </style>
   <script type="importmap">
@@ -51,7 +275,8 @@
 }
 </script>
 </head>
-  <body class="bg-slate-50 text-slate-900">
+  <body class="bg-neutral-50 text-neutral-900 antialiased">
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
