@@ -35,9 +35,8 @@ const AnimatedSection: React.FC<{ children: React.ReactNode; className?: string;
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ease-out ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-      } ${className}`}
+      className={`transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        } ${className}`}
     >
       {children}
     </div>
@@ -64,24 +63,21 @@ const Navbar = ({ activePage, setPage, isMobileMenuOpen, setIsMobileMenuOpen }: 
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'glass-white shadow-lg' : 'bg-transparent'
-    }`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass-white shadow-lg' : 'bg-transparent'
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center cursor-pointer group" onClick={() => setPage(Page.HOME)}>
             <img
-              src="./IMG_2714.PNG"
+              src="/DAISY_TRAVEL_AND_ADVENTURE/IMG_2714.PNG"
               alt="Daisy Travel Logo"
               className="w-12 h-12 object-contain mr-3 group-hover:scale-105 transition-transform"
             />
             <div>
-              <span className={`font-serif text-xl font-bold tracking-tight transition-colors ${
-                isScrolled ? 'text-neutral-900' : 'text-white'
-              }`}>Daisy Travel</span>
-              <span className={`block text-xs font-medium -mt-1 transition-colors ${
-                isScrolled ? 'text-brand-500' : 'text-brand-300'
-              }`}>& Adventure</span>
+              <span className={`font-serif text-xl font-bold tracking-tight transition-colors ${isScrolled ? 'text-neutral-900' : 'text-white'
+                }`}>Daisy Travel</span>
+              <span className={`block text-xs font-medium -mt-1 transition-colors ${isScrolled ? 'text-brand-500' : 'text-brand-300'
+                }`}>& Adventure</span>
             </div>
           </div>
 
@@ -91,13 +87,12 @@ const Navbar = ({ activePage, setPage, isMobileMenuOpen, setIsMobileMenuOpen }: 
               <button
                 key={item.value}
                 onClick={() => setPage(item.value)}
-                className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
-                  activePage === item.value
+                className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${activePage === item.value
                     ? 'bg-brand-500 text-white'
                     : isScrolled
                       ? 'text-neutral-600 hover:text-brand-500 hover:bg-brand-50'
                       : 'text-white/90 hover:text-white hover:bg-white/10'
-                }`}
+                  }`}
               >
                 {item.label}
               </button>
@@ -117,9 +112,8 @@ const Navbar = ({ activePage, setPage, isMobileMenuOpen, setIsMobileMenuOpen }: 
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`p-2 rounded-lg transition-colors ${
-                isScrolled ? 'text-neutral-700 hover:bg-neutral-100' : 'text-white hover:bg-white/10'
-              }`}
+              className={`p-2 rounded-lg transition-colors ${isScrolled ? 'text-neutral-700 hover:bg-neutral-100' : 'text-white hover:bg-white/10'
+                }`}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -138,11 +132,10 @@ const Navbar = ({ activePage, setPage, isMobileMenuOpen, setIsMobileMenuOpen }: 
                   setPage(item.value);
                   setIsMobileMenuOpen(false);
                 }}
-                className={`block w-full text-left px-4 py-3 rounded-xl text-base font-medium transition-colors ${
-                  activePage === item.value
+                className={`block w-full text-left px-4 py-3 rounded-xl text-base font-medium transition-colors ${activePage === item.value
                     ? 'bg-brand-50 text-brand-600'
                     : 'text-neutral-600 hover:bg-neutral-50'
-                }`}
+                  }`}
               >
                 {item.label}
               </button>
@@ -205,22 +198,19 @@ const Hero = ({ setPage }: any) => {
             </span>
           </div>
 
-          <h1 className={`text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-white mb-6 leading-[1.1] transition-all duration-1000 delay-100 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}>
+          <h1 className={`text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-white mb-6 leading-[1.1] transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
             <span className="block">Discover Nepal</span>
             <span className="block mt-2">with <span className="gradient-text italic">Expert Guides</span></span>
           </h1>
 
-          <p className={`text-lg sm:text-xl text-white/80 mb-8 leading-relaxed max-w-2xl transition-all duration-1000 delay-200 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}>
+          <p className={`text-lg sm:text-xl text-white/80 mb-8 leading-relaxed max-w-2xl transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
             From the heights of Everest to the jungles of Chitwan. Experience authentic adventures with our certified local guides who know Nepal like no one else.
           </p>
 
-          <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-300 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}>
+          <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
             <button
               onClick={() => setPage(Page.PACKAGES)}
               className="bg-brand-gradient hover:shadow-xl hover:shadow-brand-500/30 text-white px-8 py-4 rounded-full text-base font-semibold transition-all flex items-center justify-center gap-2 group"
@@ -237,9 +227,8 @@ const Hero = ({ setPage }: any) => {
           </div>
 
           {/* Trust Badges */}
-          <div className={`flex flex-wrap items-center gap-6 mt-12 transition-all duration-1000 delay-500 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}>
+          <div className={`flex flex-wrap items-center gap-6 mt-12 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
             <div className="flex items-center gap-2 text-white/70">
               <ShieldCheck size={20} className="text-brand-400" />
               <span className="text-sm">Nepal Tourism Board Certified</span>
@@ -402,11 +391,10 @@ const PackagesSection = ({ selectedGuideId, setSelectedGuideId }: { selectedGuid
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           <button
             onClick={() => handleFilterChange(null)}
-            className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${
-              !activeGuideFilter
+            className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${!activeGuideFilter
                 ? 'bg-brand-gradient text-white shadow-lg shadow-brand-500/30'
                 : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200'
-            }`}
+              }`}
           >
             All Packages
           </button>
@@ -414,11 +402,10 @@ const PackagesSection = ({ selectedGuideId, setSelectedGuideId }: { selectedGuid
             <button
               key={guide.id}
               onClick={() => handleFilterChange(guide.id)}
-              className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all flex items-center gap-2 ${
-                activeGuideFilter === guide.id
+              className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all flex items-center gap-2 ${activeGuideFilter === guide.id
                   ? 'bg-brand-gradient text-white shadow-lg shadow-brand-500/30'
                   : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200'
-              }`}
+                }`}
             >
               <img src={guide.photo} className="w-6 h-6 rounded-full object-cover" alt="" />
               {guide.name.split(' ')[0]}
@@ -452,12 +439,11 @@ const PackagesSection = ({ selectedGuideId, setSelectedGuideId }: { selectedGuid
                     <span className="ml-1 text-xs font-bold text-neutral-800">{pkg.rating}</span>
                   </div>
 
-                  <span className={`absolute bottom-4 left-4 px-2.5 py-1 rounded-full text-xs font-semibold ${
-                    pkg.difficulty === 'Easy' ? 'bg-green-500 text-white' :
-                    pkg.difficulty === 'Moderate' ? 'bg-yellow-500 text-white' :
-                    pkg.difficulty === 'Challenging' ? 'bg-orange-500 text-white' :
-                    'bg-red-500 text-white'
-                  }`}>
+                  <span className={`absolute bottom-4 left-4 px-2.5 py-1 rounded-full text-xs font-semibold ${pkg.difficulty === 'Easy' ? 'bg-green-500 text-white' :
+                      pkg.difficulty === 'Moderate' ? 'bg-yellow-500 text-white' :
+                        pkg.difficulty === 'Challenging' ? 'bg-orange-500 text-white' :
+                          'bg-red-500 text-white'
+                    }`}>
                     {pkg.difficulty}
                   </span>
                 </div>
@@ -530,11 +516,10 @@ const TestimonialsSection = () => {
           {TESTIMONIALS.map((testimonial, idx) => (
             <div
               key={testimonial.id}
-              className={`transition-all duration-500 ${
-                idx === currentIndex
+              className={`transition-all duration-500 ${idx === currentIndex
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-4 absolute inset-0 pointer-events-none'
-              }`}
+                }`}
             >
               <div className="flex justify-center mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
@@ -564,9 +549,8 @@ const TestimonialsSection = () => {
             <button
               key={idx}
               onClick={() => setCurrentIndex(idx)}
-              className={`h-2 rounded-full transition-all ${
-                idx === currentIndex ? 'bg-white w-8' : 'bg-white/40 w-2 hover:bg-white/60'
-              }`}
+              className={`h-2 rounded-full transition-all ${idx === currentIndex ? 'bg-white w-8' : 'bg-white/40 w-2 hover:bg-white/60'
+                }`}
             />
           ))}
         </div>
@@ -596,11 +580,10 @@ const ShopSection = () => {
               <button
                 key={cat}
                 onClick={() => setActiveCat(cat)}
-                className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${
-                  activeCat === cat
-                  ? 'bg-brand-gradient text-white shadow-lg'
-                  : 'bg-white text-neutral-600 hover:bg-neutral-100 border border-neutral-200'
-                }`}
+                className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${activeCat === cat
+                    ? 'bg-brand-gradient text-white shadow-lg'
+                    : 'bg-white text-neutral-600 hover:bg-neutral-100 border border-neutral-200'
+                  }`}
               >
                 {cat}
               </button>
@@ -680,7 +663,7 @@ const AboutSection = () => (
           <div className="space-y-4">
             <div className="flex items-start gap-4">
               <div className="bg-brand-100 p-3 rounded-xl text-brand-500 flex-shrink-0">
-                <ShieldCheck size={24}/>
+                <ShieldCheck size={24} />
               </div>
               <div>
                 <h4 className="font-bold text-neutral-900">Licensed & Certified</h4>
@@ -689,7 +672,7 @@ const AboutSection = () => (
             </div>
             <div className="flex items-start gap-4">
               <div className="bg-brand-100 p-3 rounded-xl text-brand-500 flex-shrink-0">
-                <Users size={24}/>
+                <Users size={24} />
               </div>
               <div>
                 <h4 className="font-bold text-neutral-900">Expert Local Guides</h4>
@@ -698,7 +681,7 @@ const AboutSection = () => (
             </div>
             <div className="flex items-start gap-4">
               <div className="bg-brand-100 p-3 rounded-xl text-brand-500 flex-shrink-0">
-                <Award size={24}/>
+                <Award size={24} />
               </div>
               <div>
                 <h4 className="font-bold text-neutral-900">Award Winning Service</h4>
@@ -801,7 +784,7 @@ const ContactSection = () => (
         <div className="space-y-6">
           <div className="bg-neutral-100 rounded-2xl h-72 flex items-center justify-center relative overflow-hidden group">
             <div className="absolute inset-0 bg-accent-500/5">
-              <div className="w-full h-full opacity-30" style={{backgroundImage: 'radial-gradient(circle, #F97316 1px, transparent 1px)', backgroundSize: '24px 24px'}}></div>
+              <div className="w-full h-full opacity-30" style={{ backgroundImage: 'radial-gradient(circle, #F97316 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
             </div>
             <div className="z-10 bg-white p-6 rounded-2xl shadow-xl text-center">
               <div className="w-14 h-14 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-3">
